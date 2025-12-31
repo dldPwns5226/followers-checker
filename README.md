@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Followers Checker
 
-## Getting Started
+A web application that helps users understand their follower/following
+relationships by uploading and analyzing their social data.
 
-First, run the development server:
+---
 
+## 📌 Project Overview
+- **Type**: Team project (Forked repository)
+- **Role**: Frontend developer (core contributor)
+- **Purpose**:  
+  Social platforms provide raw follower data, but it is often difficult
+  for users to clearly understand asymmetric relationships.
+  This project focuses on making those relationships easy to inspect
+  through a simple upload-and-view workflow.
+
+---
+
+## ✨ Key Features
+- Upload social data in ZIP format
+- Parse and process follower/following information on the client side
+- Clearly inspect follower relationships through a structured UI
+- Provide guided steps for users unfamiliar with data exports
+- Support UI preferences such as theme and language settings
+
+---
+
+## 🙋‍♂️ My Contribution
+Still working on this project.. so wait a minute! ⏰
+
+---
+
+## 🛠 Tech Stack
+- **Framework**: Next.js (App Router)
+- **Language**: TypeScript (strict mode)
+- **Styling**: Tailwind CSS
+- **State Management**: React Context API
+- **Data Processing**: JSZip
+- **Tooling**: ESLint, PostCSS
+
+---
+
+## 🧠 Implementation Highlights
+
+### ZIP Upload & Client-Side Data Processing
+- Implemented a ZIP upload flow using `JSZip`
+- Extracted and parsed exported social data directly in the browser
+- Avoided unnecessary server-side processing to keep the workflow lightweight
+- Encapsulated parsing logic inside `lib/` to keep UI components clean
+
+### Component-Oriented UI Architecture
+- Structured UI into reusable components such as:
+  - Header
+  - Upload bar
+  - Guide steps
+  - Settings drawer
+- Focused on separation of concerns between layout, logic, and presentation
+- Designed components to be easily extendable for future features
+
+### Global State Management
+- Used React Context API to manage:
+  - Theme (light / dark)
+  - Language preferences
+- Centralized application settings to avoid prop drilling
+- Ensured consistent UI behavior across the application
+
+### Type Safety & Maintainability
+- Enabled strict TypeScript configuration
+- Defined clear interfaces for parsed data structures
+- Focused on predictable data flow to reduce runtime errors
+
+---
+
+## 📂 Project Structure
+app/ # App Router pages and layouts
+components/ # Reusable UI components
+lib/ # Core data processing logic (ZIP parsing)
+styles/ # Global styles
+
+---
+
+## ▶️ Getting Started
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
